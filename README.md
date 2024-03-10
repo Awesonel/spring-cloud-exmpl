@@ -4,13 +4,13 @@
 
 ## Описание компонентов
 
-### Producer (data-producer)
+### Producer (demo-producer)
 - **Описание**: Простой микросервис, предоставляющий эмулированные данные.
 - **Реализация**: Использует Spring Boot и Spring Cloud для обеспечения масштабируемости и отказоустойчивости.
 - **Эндпоинты**:
   - `/data` - возвращает эмулированные данные.
 
-### Consumer (data-consumer)
+### Consumer (demo-consumer)
 - **Описание**: Микросервис, который выполняет запрос к сервису Producer для получения данных.
 - **Реализация**: Использует Spring Boot и Spring Cloud, а также Feign для упрощения взаимодействия с микросервисами.
 - **Эндпоинты**:
@@ -23,13 +23,13 @@
    - Выполните `./mvnw spring-boot:run` (или `mvn spring-boot:run`, если Maven установлен).
    - Eureka Server будет доступен по адресу [http://localhost:8761/](http://localhost:8761/).
 
-2. **Запуск Producer (data-producer):**
-   - Перейдите в директорию `data-producer`.
+2. **Запуск Producer (demo-producer):**
+   - Перейдите в директорию `demo-producer`.
    - Выполните `./mvnw spring-boot:run` (или `mvn spring-boot:run`).
    - Producer будет зарегистрирован в Eureka и готов обслуживать запросы.
 
-3. **Запуск Consumer (data-consumer):**
-   - Перейдите в директорию `data-consumer`.
+3. **Запуск Consumer (demo-consumer):**
+   - Перейдите в директорию `demo-consumer`.
    - Выполните `./mvnw spring-boot:run` (или `mvn spring-boot:run`).
    - Consumer также будет зарегистрирован в Eureka и готов обращаться к сервису Producer.
 
